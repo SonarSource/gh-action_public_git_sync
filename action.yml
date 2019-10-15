@@ -1,0 +1,13 @@
+# action.yml
+name: 'Public sync'
+author: 'Thomas Vérin <thomas.verin@sonarsource.com>'
+description: 'Automatically sync public part of private repo to public repo'
+inputs:
+  target-repo:
+    description: 'The target repository'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'  
+branding:
+  icon: 'refresh-cw'
