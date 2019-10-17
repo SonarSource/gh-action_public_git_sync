@@ -2,6 +2,11 @@
 set -e
 set -o pipefail
 
+if [ "${GITHUB_REPOSITORY}" == "SonarSource/slang" ];then
+  echo "No sync from public repository"
+  exit 0
+fi
+
 echo "[user]" > ~/.gitconfig
 echo "	email = sonartech@sonarsource.com" >> ~/.gitconfig
 echo "  name = sonartech" >> ~/.gitconfig
