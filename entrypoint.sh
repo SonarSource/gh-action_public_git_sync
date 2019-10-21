@@ -13,6 +13,7 @@ echo "  name = sonartech" >> ~/.gitconfig
 
 git clone https://${GITHUB_TOKEN}@github.com/SonarSource/public-git-sync.git
 cd public-git-sync
+git checkout fa5833c787a53884e5f9bce1cbb08a82ef1ec65f
 ls
 git clone https://${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git repo
 cd repo
