@@ -13,14 +13,14 @@ echo "  name = sonartech" >> ~/.gitconfig
 
 git clone https://${GITHUB_TOKEN}@github.com/SonarSource/public-git-sync.git
 cd public-git-sync
-git checkout fa5833c787a53884e5f9bce1cbb08a82ef1ec65f
+git checkout 
 ls
 git clone https://${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git repo
 cd repo
 ls
 echo "Starting sync"
 pwd
-../sync_public_master.sh slang https://${GITHUB_TOKEN}@github.com/SonarSource/${GITHUB_TARGET_REPOSITORY}.git
+../sync_public_branch.sh slang https://${GITHUB_TOKEN}@github.com/SonarSource/${GITHUB_TARGET_REPOSITORY}.git master
 
 echo "Starting push"
-../commit_sync_public_master.sh ${GITHUB_TARGET_REPOSITORY}
+../commit_sync_public_branch.sh ${GITHUB_TARGET_REPOSITORY} master
