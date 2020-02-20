@@ -1,20 +1,13 @@
 # Git public sync action
 
-This action automatically merges branches prefixed with name "dogfood/" into the "dogfood-automerge" branch or the branch specified as input.
-
-## Inputs
-
-### `target-repo`
-
-**Required** The target repository, where the public part of a private repo will be synced
-
+This action automatically syncs private repository branches with public ones.
 
 ## Example usage
 
 ```
-uses: SonarSource/gh-action_git-octopus@master
+uses: SonarSource/gh-action_public_git_sync@master
 env:
   GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-with:
-  target-repo: 'slang'
+  GITHUB_TARGET_REPOSITORY: slang
+  BRANCH_NAME: master
 ```
