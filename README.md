@@ -1,4 +1,7 @@
-# Git public sync action
+# Git public sync action (no longer maintained)
+
+> WARN:
+> This action is no longer maintained. As a replacement, some projects are using [SonarSource/public-git-sync](https://github.com/SonarSource/public-git-sync) instead.
 
 This action automatically syncs private repository branches with public ones.
 
